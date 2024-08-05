@@ -11,7 +11,7 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: kzk_split_shield
+    - name: kzk-split-shield
       remote: kzk-split-shield
       import: true
       revision: main
