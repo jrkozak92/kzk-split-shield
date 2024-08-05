@@ -10,7 +10,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: kzk_split_shield
-      url: https://github.com/jrkozak92/kzk_split_shield
+      url: https://git@github.com-jrkozak92:jrkozak92/kzk_split_shield
       import: true
       revision: main
   self:
