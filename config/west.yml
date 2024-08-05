@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: kzk_split_shield
+      url-base: https://git@github.com-jrkozak92:jrkozak92
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -10,7 +12,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: kzk_split_shield
-      url: https://git@github.com-jrkozak92:jrkozak92/kzk_split_shield
+      remote: kzk_split_shield
       import: true
       revision: main
   self:
