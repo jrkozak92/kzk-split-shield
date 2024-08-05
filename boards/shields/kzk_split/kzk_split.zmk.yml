@@ -2,7 +2,7 @@ file_format: "1"
 id: kzk_split
 name: KZK_Split
 type: shield
-url: https://github.com/jrkozak92/kzk_split_shield
+url: https://github.com/jrkozak92/kzk-split-shield
 requires: [pro_micro]
 features:
   - keys
