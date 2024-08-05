@@ -11,6 +11,7 @@ manifest:
       import: app/west.yml
     - name: kzk_split_shield
       url: https://github.com/jrkozak92/kzk_split_shield
-      
+      import: true
+      revision: main
   self:
     path: config
