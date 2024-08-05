@@ -9,9 +9,5 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: kzk-split-shield
-      url: https://github.com/jrkozak92/kzk-split-shield/
-      import: true
-      revision: main
   self:
     path: config
