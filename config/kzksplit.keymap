@@ -27,9 +27,9 @@
             bindings = <
 &kp ESCAPE      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp BSLH       &kp PLUS          &kp MINUS          &kp ASTRK         &kp FSLH
 &kp TAB         &kp HOME              &kp UP_ARROW          &kp END       &kp PAGE_UP      &kp LESS_THAN  &kp EQUAL         &kp GREATER_THAN   &kp GRAVE         &kp UNDER
-&kp CAPSLOCK    &kp LEFT              &kp DOWN_ARROW        &kp RIGHT     &kp PAGE_DOWN    &kp AMPS       &kp LPAR          &kp RPAR           &kp LEFT_BRACE    &kp RIGHT_BRACE
-&kp LEFT_SHIFT  &kp INS               &kp BACKSPACE         &kp DELETE    &kp K_MUTE       &kp PIPE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp COLON
-                                      &to 0                 &kp LCTRL     &to 2            &kp RETURN     &kp SPACE         &kp LEFT_COMMAND
+&kp LEFT_SHIFT  &kp LEFT              &kp DOWN_ARROW        &kp RIGHT     &kp PAGE_DOWN    &kp AMPS       &kp LPAR          &kp RPAR           &kp LEFT_BRACE    &kp RIGHT_BRACE
+&kp LCTRL       &kp CAPSLOCK          &kp BACKSPACE         &kp DELETE    &kp K_MUTE       &kp PIPE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp COLON
+                                      &to 0                 &kp LEFT_ALT  &to 2            &kp RETURN     &kp SPACE         &kp LEFT_COMMAND
             >;
         };
 
