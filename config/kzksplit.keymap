@@ -5,21 +5,52 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-                        bindings = <
-                    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6 &kp N7  &kp N8    &kp N9  &kp N0
-                    &kp Q  &kp W  &kp E  &kp R  &kp T     &kp Y  &kp U   &kp I     &kp O   &kp P
-                    &kp A  &kp S  &kp D  &kp F  &kp G     &kp H  &kp J   &kp K     &kp L   &kp SEMI
-                    &kp Z  &kp X  &kp C  &kp V  &kp B     &kp N  &kp M   &kp COMMA &kp DOT &kp FSLH
-                        &kp LCTRL  &bt BT_CLR &kp LGUI       &kp BSPC &kp SPACE &kp DEL
-                        >;
-                };
+        alpha {
+            bindings = <
+&kp N1  &kp N2  &kp N3          &kp N4              &kp N5   &kp N6     &kp N7              &kp N8          &kp N9   &kp N0
+&kp Q   &kp W   &kp E           &kp R               &kp T    &kp Y      &kp U               &kp I           &kp O    &kp P
+&kp A   &kp S   &mt D LEFT_ALT  &mt F LEFT_COMMAND  &kp G    &kp H      &mt J LEFT_COMMAND  &mt K LEFT_ALT  &kp L    &kp SEMI
+&kp Z   &kp X   &kp C           &kp V               &kp B    &kp N      &kp M               &kp COMMA       &kp DOT  &kp FSLH
+                &kp LEFT_SHIFT  &kp SPACE           &kp RET  &kp LCTRL  &kp SPACE           &to 1
+            >;
         };
+
+        navsymbols {
+            bindings = <
+&kp ESCAPE      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp BSLH       &kp PLUS          &kp MINUS          &kp ASTRK         &kp FSLH
+&kp TAB         &kp HOME              &kp UP_ARROW          &kp END       &kp PAGE_UP      &kp LESS_THAN  &kp EQUAL         &kp GREATER_THAN   &kp GRAVE         &kp UNDER
+&kp CAPSLOCK    &kp LEFT              &kp DOWN_ARROW        &kp RIGHT     &kp PAGE_DOWN    &kp AMPS       &kp LPAR          &kp RPAR           &kp LEFT_BRACE    &kp RIGHT_BRACE
+&kp LEFT_SHIFT  &kp INS               &kp BACKSPACE         &kp DELETE    &kp K_MUTE       &kp PIPE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp COLON
+                                      &to 0                 &kp LCTRL     &to 2            &kp RETURN     &kp SPACE         &kp LEFT_COMMAND
+            >;
+        };
+
+        mousenum {
+            bindings = <
+&trans             &trans  &trans     &trans     &trans          &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
+&trans             &trans  &trans     &trans     &trans          &kp KP_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
+&kp K_SCROLL_UP    &trans  &mkp MCLK  &trans     &trans          &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
+&kp K_SCROLL_DOWN  &trans  &trans     &trans     &kp KP_NUMLOCK  &kp KP_DIVIDE    &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_EQUAL     &kp KP_CLEAR
+                           &to 0      &mkp LCLK  &mkp RCLK       &to 3            &kp KP_EQUAL     &kp KP_CLEAR
+            >;
+        };
+
+        functionsmedia {
+            bindings = <
+&kp F1          &kp F2            &kp F3                             &kp F4                                  &kp F5        &kp F6  &kp F7          &kp F8            &kp F9      &kp F10
+&kp F11         &kp F12           &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &trans        &trans  &trans          &kp C_SHUFFLE     &trans      &trans
+&kp LEFT_SHIFT  &kp LEFT_COMMAND  &kp NUMBER_3                       &kp NUMBER_4                            &kp N5        &trans  &kp C_PREVIOUS  &kp K_PLAY_PAUSE  &kp C_NEXT  &trans
+&bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2                       &bt BT_SEL 3                            &bt BT_SEL 4  &trans  &trans          &trans            &trans      &bt BT_CLR
+                                  &to 0                              &trans                                  &trans        &trans  &trans          &trans
+            >;
+        };
+    };
 };
