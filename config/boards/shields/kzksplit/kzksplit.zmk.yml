@@ -1,11 +1,11 @@
 file_format: "1"
-id: kzk_split
-name: KZK_Split
+id: kzksplit
+name: KZKSplit
 type: shield
 url: https://github.com/jrkozak92/kzk-split-shield
 requires: [pro_micro]
 features:
   - keys
 siblings:
-  - kzk_split_left
-  - kzk_split_right
+  - kzksplit_left
+  - kzksplit_right

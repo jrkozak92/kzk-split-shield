@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "kzk_split.dtsi"
+#include "kzksplit.dtsi"
 
 &kscan0 {
     col-gpios

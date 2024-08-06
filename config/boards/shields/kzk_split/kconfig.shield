@@ -1,5 +1,0 @@
-config SHIELD_KZK_SPLIT_LEFT
-    def_bool $(shields_list_contains,kzk_split_left)
-
-config SHIELD_KZK_SPLIT_RIGHT
-    def_bool $(shields_list_contains,kzk_split_right)
