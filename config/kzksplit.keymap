@@ -17,6 +17,9 @@
 &mmv {
 };
 
+&msc {
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
