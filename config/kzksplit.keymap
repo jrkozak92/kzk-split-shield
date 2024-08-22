@@ -14,6 +14,9 @@
     tapping-term-ms = <200>;
 };
 
+&mmv {
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -30,21 +33,21 @@
 
         navsymbols {
             bindings = <
-&kp ESCAPE      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp BSLH       &kp PLUS          &kp MINUS          &kp ASTRK         &kp FSLH
-&kp TAB         &kp HOME              &kp UP_ARROW          &kp END       &kp PAGE_UP      &kp LESS_THAN  &kp EQUAL         &kp GREATER_THAN   &kp GRAVE         &kp UNDER
-&kp LEFT_SHIFT  &kp LEFT              &kp DOWN_ARROW        &kp RIGHT     &kp PAGE_DOWN    &kp AMPS       &kp LPAR          &kp RPAR           &kp LEFT_BRACE    &kp RIGHT_BRACE
-&kp LCTRL       &kp CAPSLOCK          &kp BACKSPACE         &kp DELETE    &kp K_MUTE       &kp PIPE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp COLON
-                                      &to 0                 &kp LEFT_ALT  &to 2            &kp RETURN     &kp SPACE         &kp LEFT_COMMAND
+&kp ESCAPE      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC       &kp C_VOL_DN   &kp C_VOLUME_UP  &kp BSLH          &kp PLUS          &kp MINUS          &kp ASTRK         &kp FSLH
+&kp TAB         &kp HOME              &mt LG(LEFT_SHIFT) K_MUTE  &kp END        &kp PAGE_UP      &kp LESS_THAN     &kp EQUAL         &kp GREATER_THAN   &kp GRAVE         &kp UNDER
+&kp LEFT_SHIFT  &kp LEFT              &kp UP                     &kp RIGHT      &kp PAGE_DOWN    &kp AMPS          &kp LPAR          &kp RPAR           &kp LEFT_BRACE    &kp RIGHT_BRACE
+&kp LCTRL       &kp CAPSLOCK          &kp DOWN                   &kp BACKSPACE  &kp DEL          &kp PIPE          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp COLON
+                                      &to 0                      &kp LEFT_ALT   &to 2            &kp LEFT_COMMAND  &kp SPACE         &kp RET
             >;
         };
 
         mousenum {
             bindings = <
-&trans                &trans  &trans     &trans     &trans          &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
-&trans                &trans  &trans     &trans     &trans          &kp KP_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
-&kp C_AC_SCROLL_UP    &trans  &mkp MCLK  &trans     &trans          &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
-&kp C_AC_SCROLL_DOWN  &trans  &trans     &trans     &kp KP_NUMLOCK  &kp KP_DIVIDE    &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_EQUAL     &kp C
-                              &to 0      &mkp LCLK  &mkp RCLK       &to 3            &kp KP_EQUAL     &kp C
+&trans                &trans          &trans          &trans           &trans          &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
+&trans                &trans          &mmv MOVE_UP    &trans           &trans          &kp KP_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
+&kp C_AC_SCROLL_UP    &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans          &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
+&kp C_AC_SCROLL_DOWN  &trans          &mmv MOVE_DOWN  &trans           &kp KP_NUMLOCK  &kp KP_DIVIDE    &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_EQUAL     &kp C
+                                      &to 0           &mkp LCLK        &mkp RCLK       &to 3            &kp KP_EQUAL     &kp C
             >;
         };
 
