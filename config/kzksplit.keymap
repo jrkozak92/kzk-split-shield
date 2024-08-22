@@ -48,8 +48,8 @@
             bindings = <
 &trans          &trans          &trans          &trans           &trans          &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
 &trans          &trans          &mmv MOVE_UP    &trans           &trans          &kp KP_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
-&msc MOVE_UP    &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans          &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
-&msc MOVE_DOWN  &trans          &mmv MOVE_DOWN  &trans           &kp KP_NUMLOCK  &kp KP_DIVIDE    &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_EQUAL     &kp C
+&msc SCRL_UP    &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans          &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
+&msc SCRL_DOWN  &trans          &mmv MOVE_DOWN  &trans           &kp KP_NUMLOCK  &kp KP_DIVIDE    &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_EQUAL     &kp C
                                 &to 0           &mkp LCLK        &mkp RCLK       &to 3            &kp KP_EQUAL     &kp C
             >;
         };
