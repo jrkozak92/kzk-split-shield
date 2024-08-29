@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
 #include <behaviors/mouse_keys.dtsi>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
@@ -47,11 +47,11 @@
 
         mousenum {
             bindings = <
-&trans          &trans          &trans          &trans           &trans          &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
-&trans          &trans          &mmv MOVE_UP    &trans           &trans          &kp KP_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
-&msc SCRL_UP    &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans          &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
-&msc SCRL_DOWN  &trans          &mmv MOVE_DOWN  &trans           &kp KP_NUMLOCK  &kp KP_DIVIDE    &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_EQUAL     &kp C
-                                &to 0           &mkp LCLK        &mkp RCLK       &to 3            &kp KP_EQUAL     &kp C
+&kp ESC         &kp HOME        &kp LALT        &kp END          &kp KP_NUM         &kp KP_ASTERISK  &kp LPAR         &kp RPAR         &trans           &to 4
+&kp TAB         &kp LEFT        &kp LSHFT       &kp RIGHT        &kp LGUI           &kp KP_PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp C
+&msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans             &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SPACE
+&msc SCRL_DOWN  &trans          &mmv MOVE_DOWN  &kp BACKSPACE    &kp LG(BACKSPACE)  &kp KP_DIVIDE    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp RET
+                                &to 0           &mkp LCLK        &mkp RCLK          &to 3            &kp KP_NUMBER_0  &kp DOT
             >;
         };
 
@@ -62,6 +62,16 @@
 &kp LEFT_SHIFT  &kp LEFT_COMMAND  &kp NUMBER_3                       &kp NUMBER_4                            &kp N5        &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_NEXT  &trans
 &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2                       &bt BT_SEL 3                            &bt BT_SEL 4  &trans  &trans          &trans             &trans      &bt BT_CLR
                                   &to 0                              &trans                                  &trans        &trans  &trans          &trans
+            >;
+        };
+
+        CAD {
+            bindings = <
+&kp ESC   &trans     &kp D         &kp F          &trans      &kp LG(S)  &kp LG(Z)       &kp LG(LS(Z))     &trans           &trans
+&kp TAB   &kp C      &kp R         &kp L          &kp T       &trans     &msc SCROLL_UP  &msc SCROLL_DOWN  &to 2            &trans
+&kp LALT  &kp LSHFT  &kp LEFT_GUI  &mkp MCLK      &kp M       &trans     &mmv MOVE_LEFT  &mmv MOVE_UP      &mmv MOVE_RIGHT  &trans
+&kp V     &kp E      &kp I         &kp BACKSPACE  &kp DELETE  &trans     &trans          &mmv MOVE_DOWN    &trans           &trans
+                     &to 0         &trans         &kp RET     &trans     &mkp LCLK       &mkp RCLK
             >;
         };
     };
