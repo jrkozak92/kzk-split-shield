@@ -68,7 +68,7 @@
         CAD {
             bindings = <
 &kp ESC   &trans     &kp D         &kp F          &trans      &kp LG(S)  &kp LG(Z)       &kp LG(LS(Z))     &trans           &trans
-&kp TAB   &kp C      &kp R         &kp L          &kp T       &trans     &msc SCROLL_UP  &msc SCROLL_DOWN  &to 2            &trans
+&kp TAB   &kp C      &kp R         &kp L          &kp T       &trans     &msc SCRL_UP  &msc SCRL_DOWN  &to 2            &trans
 &kp LALT  &kp LSHFT  &kp LEFT_GUI  &mkp MCLK      &kp M       &trans     &mmv MOVE_LEFT  &mmv MOVE_UP      &mmv MOVE_RIGHT  &trans
 &kp V     &kp E      &kp I         &kp BACKSPACE  &kp DELETE  &trans     &trans          &mmv MOVE_DOWN    &trans           &trans
                      &to 0         &trans         &kp RET     &trans     &mkp LCLK       &mkp RCLK
